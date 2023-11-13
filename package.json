@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "binary-search": "node binary-search.js",
-    "sort": "node sort.js"
+    "sort": "node sort.js",
+    "trees": "node trees.js"
   },
   "keywords": [],
   "author": "",
