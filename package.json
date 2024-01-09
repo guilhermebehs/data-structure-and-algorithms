@@ -6,7 +6,8 @@
   "scripts": {
     "binary-search": "node binary-search.js",
     "sort": "node sort.js",
-    "trees": "node trees.js"
+    "trees": "node trees.js",
+    "recursion": "node recursion.js"
   },
   "keywords": [],
   "author": "",
