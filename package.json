@@ -7,7 +7,8 @@
     "binary-search": "node binary-search.js",
     "sort": "node sort.js",
     "trees": "node trees.js",
-    "recursion": "node recursion.js"
+    "recursion": "node recursion.js",
+    "graphs": "node graphs.js"
   },
   "keywords": [],
   "author": "",
