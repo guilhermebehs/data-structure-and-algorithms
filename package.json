@@ -9,7 +9,8 @@
     "trees": "node trees.js",
     "recursion": "node recursion.js",
     "graphs": "node graphs.js",
-    "weighted-graphs": "node weighted-graphs.js"
+    "weighted-graphs": "node weighted-graphs.js",
+    "dynamic-programming": "node dynamic-programming.js"
   },
   "keywords": [],
   "author": "",
