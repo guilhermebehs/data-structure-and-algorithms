@@ -1,15 +1,20 @@
 
 
 function bubbleSort(list){
-   
+  let swapped
+
+  do{
+    swapped  = false
     for(let i =0; i < list.length; i++){
-        for(let j =0; j < list.length-1; j++)
-        if(list[i] < list[j]){
-            const temp = list[j]
-            list[j] = list[i]
-            list[i] = temp
-        }
-    }
+      if(list[i] > list[i+1]){
+          const temp = list[i+1]
+          list[i+1] = list[i]
+          list[i] = temp
+          swapped = true
+      }
+  }
+    }while(swapped)
+  
 
    return list  
 }
