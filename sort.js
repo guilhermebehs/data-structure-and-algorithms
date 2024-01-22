@@ -35,7 +35,7 @@ function quickSort(list){
         else if(pivot < number)
           greaterThan.push(number)
 
-   return quickSort(smallerThan,1).concat(pivot).concat(quickSort(greaterThan, 1))    
+   return quickSort(smallerThan).concat(pivot).concat(quickSort(greaterThan))    
 }
 
 function selectionSort(list){
