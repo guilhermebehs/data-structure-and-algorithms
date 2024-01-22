@@ -18,7 +18,7 @@ export class ClassScheduleProblem{
     // select the first class and remove it from the list    
         let nextClass = this.#classes.reduce((c1, c2)=> c1.endsAt.getTime() > c2.endsAt.getTime() ? c2: c1, this.#classes[0])
         schedule.push(nextClass)
-        this.#classes = this.#classes.filter((currentClass)=> currentClass.name != nextClass.name)
+        this.#classes.splice(this.#classes.indexOf(nextClass),1)
     
         for(let y =0; y < this.#classes.length; y++){
     // get all classes that starts right after the end of the last class       
@@ -27,7 +27,7 @@ export class ClassScheduleProblem{
             nextClass = possibleNextClasses.reduce((c1, c2)=> c1.startsAt.getTime() > c2.startsAt.getTime() ? c2: c1, possibleNextClasses[0])
     // insert the next class in the schedule and remove it from the list        
             schedule.push(nextClass)
-            this.#classes = this.#classes.filter((currentClass)=> currentClass.name != nextClass.name)
+            this.#classes.splice(this.#classes.indexOf(nextClass),1)
         }
 
         return schedule

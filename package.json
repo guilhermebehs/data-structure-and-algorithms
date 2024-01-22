@@ -10,6 +10,7 @@
     "recursion": "node recursion.js",
     "graphs": "node graphs.js",
     "weighted-graphs": "node weighted-graphs.js",
+    "greedy": "node greedy-algorithms.js",
     "dynamic-programming": "node dynamic-programming.js"
   },
   "keywords": [],
