@@ -28,19 +28,20 @@ function quickSort(list){
     if(list.length === 2)
       return  list[0] > list[1] ? [list[1], list[0]] : [list[0], list[1]]
 
-
-    pivot = Math.floor(list.reduce((prev,next)=>prev+next)/list.length)  
-
+    pivot = list[Math.floor(Math.random() * list.length)]
 
     let smallerThan =[]
-    let greaterThan = []      
-    for(const number of list)  
+    let greaterThan = []
+    let equalThan = []      
+    for(const number of list)
         if(pivot > number) 
           smallerThan.push(number)
         else if(pivot < number)
           greaterThan.push(number)
+        else
+          equalThan.push(number)
 
-   return quickSort(smallerThan).concat(pivot).concat(quickSort(greaterThan))    
+   return [...quickSort(smallerThan), ...equalThan, ...quickSort(greaterThan)]  
 }
 
 function selectionSort(list){
@@ -61,19 +62,18 @@ function selectionSort(list){
 
 }
 
-console.log('Bubble sort')
-console.time()
-console.log(bubbleSort([3,2,4,1,5,10,13,9,8,6,7]))
-console.timeEnd()
+const unorderedList = Array(8).fill(0).map(()=> Math.floor(Math.random() * 30))  
+
+console.time('Bubble sort')
+console.log(bubbleSort(unorderedList))
+console.timeEnd('Bubble sort')
 
 
-console.log('Quick sort')
-console.time()
-console.log(quickSort([3,2,4,1,5,10,13,9,8,6,7]))
-console.timeEnd()
+console.time('Quick sort')
+console.log(quickSort(unorderedList))
+console.timeEnd('Quick sort')
 
 
-console.log('Selection sort')
-console.time()
-console.log(selectionSort([3,2,4,1,5,10,13,9,8,6,7]))
-console.timeEnd()
+console.time('Selection sort')
+console.log(selectionSort(unorderedList))
+console.timeEnd('Selection sort')
