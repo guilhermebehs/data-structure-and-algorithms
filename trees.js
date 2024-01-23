@@ -1,34 +1,10 @@
 class Node{
-    _value = null
-    _left = null
-    _right = null
+    value = null
+    left = null
+    right = null
 
     constructor(value){
       this._value = value
-    }
-
-    get value(){
-      return this._value
-    }
-
-    set value(value){
-      this._value = value
-    }
-
-    get left(){
-      return this._left
-    }
-
-    set left(left){
-      this._left = left
-    }
-
-    get right(){
-      return this._right
-    }
-
-    set right(right){
-      this._right = right
     }
 
 }
